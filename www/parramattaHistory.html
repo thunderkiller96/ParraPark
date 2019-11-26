@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+<title>Parra Park</title>
+</head>
+
+<header>
+    <button class="back">< back</button>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#9776;</button>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <div class="menu">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="historyMenu.html"><li>History</li></a>
+        <a href="mapSelection.html"><li>Tour</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</div> 
+<br/><br/>
+<center><a href="index.html"><img  id ="logoImage" src="./img/parraLogo.png" alt="Go Home!"></a></center>
+
+
+
+<h3 style="text-align:center;">History of Parramatta Park</h3>
+<div class="wrap">
+    <img src="./img/about.png" width="100%">
+    <!-- <div class="text_over_image">HISTORY</div> -->
+    <!-- <button id="remove">test me</button> -->
+</div>
+<div id = "textMargin">
+    <br/>
+    <center><b>“Wuru mi mittiga gu rum baurruk dumul”</b></center>
+    <center><p>“Hello friends it’s good to see you in this friendly place!”</p></center> 
+             
+    <p>Long before Parramatta Park was gazetted as a People’s Park in 1858, it played a vital role in the lives of Aboriginal people and European settlers.<br/><br/>
+
+    The area of Parramatta was known as Burramatta by the Darug people – the area’s first inhabitants and traditional custodians for more than 40,000 years. ‘Burra’ means eel and ‘matta’ means creek; the area was great for hunting, fishing and gathering plants. <br/><br/> 
+
+    Starting as an Aboriginal Meeting Place, the river has always been significant to Parramatta, having also drawn European settlers who established a colonial settlement in 1788 after Governor Philip led an expedition through Darug Nation country in search of farming land.<br/><br/>
+    In September 1788 Governor Phillip announced his intention to establish a settlement at Parramatta. The soil of the area was found to be more suitable for farming than the area surrounding the settlement of Port Jackson.<br/><br/>
+
+    Old Government House and the Domain (Parramatta Park) secured its World Heritage Listing (link to Trust website) in 2010, and is one of 11 Australian Convict Sites which collectively illustrate the global phenomenon of the forced migration of convicts.<br/><br/>
+    
+    In 1796, Governor Hunter granted George Salter 30 acres of land. Salter erected a small cottage sometime between 1796 and 1800, which was later purchased by Governor Macquarie for Government use. This cottage, which is still standing, was enlarged by Macquarie and became known as the Governor's Dairy (link to Home/History/Dairy Cottage page in app). It is one of the oldest buildings in Australia and underwent a $1.7 million conservation upgrade completed in 2016.<br/><br/>
+
+    Today, Parramatta Park continues to be used as a public park (celebrating 160 years in 2018) and is a place for the community to connect with and enjoy the natural environment nestled within an urban landscape. <br/><br/>
+
+    Gain further insight into the Park’s varied past with our <a href="#" onclick="window.open('https://ehive.com/collections/5348/parramatta-park', '_system');">online archive</a> detailing objects of historical significance that have been found in Parramatta Park.
+
+</p>
+</div>
+<!--    <button>&#8678;</button>-->
+
+</body>
+</html>

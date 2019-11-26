@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <title>360 Tour</title>
+  <link rel="stylesheet" type="text/css" href="css/360-navigation.css" />
+
+<header>
+<button class="back">< back</button>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#9776;</button><!-- &#735; -->
+</header>
+
+</head>
+<body>
+
+  <div id="desc-container" style="display:none">
+    <div class="title">TIMBER</div>
+    <div class="text">These sections of timber date to the 1790s. All of the timber in the cottage was sourced locally and cut by convict workers with axes and pit saws, evidenced by the hand-hewn axe markings which are visible on the rough beams.
+    </div>
+  </div>
+
+  <div id="desc-container-brick" style="display:none">
+    <div class="title">ENGLISH BOND BRICKS</div>
+    <div class="text">These English bond bricks were made by convicts at the Governmvent Farm, dating to the 1790's. The brick kilns were located on the river opposite Dodd’s Farm near Old Government House. All of the material used to build the cottage was made locally by convicts. The mortar is of shell lime mixed with a loam earth typical of the early colonial era.
+    </div>
+  </div>
+
+  <div id="desc-container-window" style="display:none">
+    <div class="title">WINDOW</div>
+    <div class="text">These windows date from 1823 and are unusual, as the glazing bars are much smaller than examples from the same time period found in New South Wales. This particular type is only found in rural England and is a good example of the migration of ideas and culture that arrived with the convict builders.
+    </div>
+  </div>
+
+  <div id="desc-container-door" style="display:none">
+    <div class="title">DOORWAYS</div>
+    <div class="text">The doorways in the cottage are smaller than those seen in buildings constructed later in the 19th century. This is because the convicts and early settlers were physically smaller in size than people today. The main cause of this was the poor diet and living conditions in 1700s England. The children born in Australia in the early 19th century were much taller and healthier than their parents because of the better diet, sunshine and clean air and water.
+    </div>
+  </div>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/panolens-offline.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+
+ <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="historyMenu.html"><li>History</li></a>
+    <a href="mapSelection.html"><li>Tour</li></a>
+    <a href="about.html"><li>About</li></a>
+  </ul>
+</div>
+  <script>
+
+    var cottageEntrance, cottageRoom1, cottageRoom2,  viewer;
+    var infospotTimber, infospotBrick, infospoWindow, infospotDoor;
+
+    //setting the start position for the 360 photo
+    var lookAtPositions = [
+    new THREE.Vector3(4839.04, -1215.74, -174.08)
+
+    ];
+
+    cottageRoom2 = new PANOLENS.ImagePanorama( 'img/360/cottageRoom2_360.jpg' );
+
+    cottageRoom2.addEventListener( 'enter-fade-start', function(){
+      viewer.tweenControlCenter( lookAtPositions[0], 0 );
+    } );
+
+    //creating the infospot
+    infospotTimber = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotTimber.position.set(4515.37,-276.28,2112.56); //setting the coordinate for the infospot
+    infospotTimber.addHoverElement( document.getElementById( 'desc-container' ), 200 );
+
+    infospotBrick = new PANOLENS.Infospot( 350, '' );
+    infospotBrick.position.set(-1375.6,1882.97,4418.82);
+    infospotBrick.addHoverElement( document.getElementById( 'desc-container-brick' ), 200 );
+
+    infospoWindow = new PANOLENS.Infospot( 350, '' );
+    infospoWindow.position.set(-4968.86,-312.64,359.82);
+    infospoWindow.addHoverElement( document.getElementById( 'desc-container-window' ), 200 );
+
+    infospotDoor = new PANOLENS.Infospot( 350, '' );
+    infospotDoor.position.set(4355.65,-801.16,-2306.18);
+    infospotDoor.addHoverElement( document.getElementById( 'desc-container-door' ), 200 );
+
+    viewer = new PANOLENS.Viewer({ output: 'console',
+      cameraFov: 90, //setting camera filed of views
+      autoHideInfospot: false // ensure that the infospots stays on the screen all the time.
+    });
+
+    //adding all the infospots into the viewer
+    cottageRoom2.add(infospotTimber);
+    cottageRoom2.add(infospotBrick);
+    cottageRoom2.add(infospoWindow);
+    cottageRoom2.add(infospotDoor);
+    viewer.add( cottageRoom2 );
+
+  </script>
+
+</body>
+</html>

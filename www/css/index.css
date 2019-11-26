@@ -1,0 +1,321 @@
+/*page layout*/
+#logoImage
+{
+    /*display: block;*/
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+h1
+{
+   /*position: absolute;*/
+ /*  top: 20%;
+   left: 20%;
+   margin-top: -50px;
+   margin-left: -50px;*/
+   color: black;
+   font-weight: bold;
+   font-size: 50px;
+   text-align: center;
+}
+
+h2
+{
+   position: absolute;
+   top: 40%;
+   text-align: center; 
+   margin-top: -50px;
+   margin-left: 20px;
+   color: white;
+   font-weight: bold;
+   font-size: 50px;
+}
+
+body{
+    /*background: white;*/
+/*
+    background-image:url("../img/indexbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    */
+    /*    position: fixed;*/
+    /*    background-size: cover;*/
+}
+
+#textMargin{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-family: "Arial", Helvetica, sans-serif;
+    color: black;
+    
+/*
+    color: black;
+    background: white;
+    */
+}
+
+div.txtDairyCottage{
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+    left:5px;
+
+}
+
+footer 
+{
+    margin: 0;
+    /*background-color: purple; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+ /*   height: 13vh;*/
+    width: 100%;
+    overflow:hidden;
+}
+
+.btnHistory
+{
+/*
+    
+    position: relative;
+    margin-left: 6%;
+    top: 25%;
+    width: 8em;
+    height:50%;
+    */
+    
+    position: absolute;
+    top: 10%;
+    left: 10vw;   
+    width: 20vw;
+    height:80%;
+    
+/*
+    position: absolute;
+    top: 10%;
+    left: 5vw;   
+    width: 30vw;
+    height:70%;
+    */
+    
+}
+
+.buttonSize{
+    left:50px;
+    width: 20vw;
+}
+
+.btnTour
+{
+    /*
+    position: absolute;
+    height: 50%;
+    bottom: 25%;
+    width: 8em;
+    left: 37%;
+    margin: auto;
+    */
+/*
+    position: relative;
+    margin-left: 5%;
+    top: 25%;
+    width: 8em;
+    height:50%;
+    */
+    
+    /*position: absolute;
+
+    top: 10%;
+    left: 40vw;   
+    width: 20vw;
+    height:80%;*/
+
+    float:left;
+    width:100px;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    margin-left: 10px;
+    
+/*
+      position: absolute;
+    top: 10%;
+    left: 35vw;   
+    width: 30vw;
+    height:70%;
+    */
+}
+
+.btnTBA
+{
+/*
+    position: relative;
+    margin-left: 5%;
+    top: 25%;
+    width: 8em;
+    height:50%;
+    */
+    position: absolute;
+
+    top: 10%;
+    right: 10vw;   
+    width: 80px;
+    height:80px;
+/*
+        position: absolute;
+    top: 10%;
+    right: 5vw;   
+    width: 30vw;
+    height:70%;
+    */
+}
+
+[class*="col-"] 
+{
+    float: left;
+    padding: 0px;
+}
+
+/* For mobile phones: */
+[class*="col-"] 
+{
+    width: 100%;
+}
+
+
+/*code retrieved from https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+@media only screen and (min-width: 600px)
+{
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/*history menu*/
+div.menuInfo{
+    height: 10em;
+    position: absolute;
+    top: 35vh;
+    text-align: center;
+}
+
+div.menuInfo button{
+    margin: 0;
+    background: purple;
+    position: relative;
+    vertical-align: middle;
+    left: 30vw;
+    margin-top: 10%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.menuSize{
+    width: 70vw;
+    height: 10vh;
+}
+
+.imageBtn{
+ position: absolute;
+ /*    margin-left: 6%;*/
+ top: 10%;
+ left: 50px;   
+ width: 6em;
+ height:70%;
+
+}
+
+/*backbutton*/
+.next {
+    background-color: green;
+    color: red;
+    position: relative;
+    margin-left: 6%;
+    top: 25%;
+    font-size: 30px;
+    
+}
+
+.round{
+    border-radius: 150%;
+}
+
+/*
+.social-channels{
+    background: purple;
+}
+*/
+
+a:visited{
+    color: blue;
+}
+
+.footer-item {
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    /*border-style: solid;*/
+}
+
+.footer-item span {
+    color:black;
+}
+
+.footer-item img {
+    height: 100px;
+}
+
+.blockCenter{
+    margin:auto;
+    text-align: center;
+}
+
+.wrap {
+    /*width: 1060px;*/
+    height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
+}
+.text_over_image {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:#fff;
+   height:100px;
+   font-size: 200%;
+}
+
+.social{
+    /*margin: auto;*/
+    /*width: 70%;*/
+    /*border: 3px solid #73AD21;*/
+    padding: 10px;
+    text-align: center;
+}
+
+a:link{
+    text-decoration: none;
+}

@@ -1,0 +1,101 @@
+    <!DOCTYPE html>
+    <!--
+        Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+        Licensed to the Apache Software Foundation (ASF) under one
+        or more contributor license agreements.  See the NOTICE file
+        distributed with this work for additional information
+        regarding copyright ownership.  The ASF licenses this file
+        to you under the Apache License, Version 2.0 (the
+        "License"); you may not use this file except in compliance
+        with the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing,
+        software distributed under the License is distributed on an
+        "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+        specific language governing permissions and limitations
+        under the License.
+    -->
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/imageComparison.css"/>
+
+    <title>Parra Park</title>
+</head>
+
+<header>
+    <button class="back">< back</button>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/imageComparison.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <div class="menu">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="historyMenu.html"><li>History</li></a>
+        <a href="mapSelection.html"><li>Tour</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</div> 
+<br/><br/>
+<center><a href="index.html"><img  id ="logoImage" src="./img/parraLogo.png" alt="Go Home!"></a></center>
+
+<br/>
+<h3 style="text-align:center;">DAIRY COTTAGE</h3>
+<div class="ba-slider">
+    <img src="img/Cottage_present.png" alt="" width="300px" height="300px">       
+    <div class="resize">
+        <img src="img/cottage_past.jpg" alt="" width="300px" height="300px">
+    </div>
+    <span class="handle"></span>
+</div>
+
+<div id="textMargin">
+
+
+    <p>The Dairy Precinct was home to the Park Rangers from the 1850s until 1970s. The Ranger’s children and their friends played in the Dairy Cottage, Rangers Cottage and throughout the Park.<br/><br/>
+
+        At this location, a former convict named George Salter received a 30 acre grant in 1796. Salter established a flourishing farm with 10 acres of land cultivated in wheat and another 20 acres cultivated in maize. When Salter left for Hobart in 1813, Governor Lachlan Macquarie purchased his farm and re-established it as a dairy. The milk, cheese and butter made here was supplied to Government House and local institutions.<br/><br/>
+
+        This building, known as the Dairy Cottage or ‘Salter’s Cottage’, was constructed between 1796 and 1805 as a two-roomed cottage by ex-convict George Salter. It is one of the earliest intact cottages still standing in Australia today.<br/><br/>
+
+        To see inside, go to the <a href="mapDairyCottage.html">Dairy Cottage Virtual Tour</a>  
+
+    </p>
+
+</div>
+
+</body>
+
+</div>
+</html>

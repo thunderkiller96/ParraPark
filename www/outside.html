@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <title>Outside</title>
+  <link rel="stylesheet" type="text/css" href="css/360-navigation.css" />
+
+  <style>
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  a:link, a:visited{
+    color: #bdc3c7;
+  }
+
+  .credit{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+  }
+
+   #desc-container-garden {
+    max-width: 500px;
+    max-height: 500px;
+    min-width: 200px;
+    min-height: 250px;
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #desc-container > iframe {
+    border: none;
+    width:100%;
+  }
+  .title {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  .text {
+    padding: 0 20px 20px 20px;
+  }
+</style>
+
+<header>
+<button class="back">< back</button>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#9776;</button><!-- &#735; -->
+</header>
+
+</head>
+<body>
+
+
+<div id="desc-container-garden" style="display:none">
+    <div class="title">Dairy Cottage Garden</div>
+    <div class="text">Surrounding the Dairy and Rangers Cottages is the beautiful Dairy Cottage Garden featuring manicured lawns, sandstone paths, a majestic Fig tree and elegant Jacaranda trees overlooking the Parramatta River. 
+A vegetable and herb garden remains tended to and an interpretive metal cow sculpture represents the Dairy cows that would have lived there. 
+
+    </div>
+  </div>
+
+ <script src="js/three.min.js"></script>
+ <script src="js/panolens-offline.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+
+ <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="historyMenu.html"><li>History</li></a>
+    <a href="mapSelection.html"><li>Tour</li></a>
+    <a href="about.html"><li>About</li></a>
+  </ul>
+</div> 
+ <script>
+
+  var sidegarden, backGarden1, backGarden2,viewer;
+  var infospotGarden;
+
+
+
+  sidegarden = new PANOLENS.ImagePanorama( 'img/360/outsideSide_360.jpeg' );
+  backGarden1 = new PANOLENS.ImagePanorama( 'img/360/outsideBack1_360.jpeg' );
+  backGarden2 = new PANOLENS.ImagePanorama( 'img/360/outsideBack2_360.jpeg' );
+
+  infospotGarden = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotGarden.position.set(-4967.35,504.36,75.80);
+    infospotGarden.addHoverElement( document.getElementById( 'desc-container-garden' ), 200 );
+
+  viewer = new PANOLENS.Viewer({ 
+    output: 'console',
+    autoHideInfospot: false 
+  });
+  sidegarden.add(infospotGarden);
+  viewer.add( sidegarden );
+  viewer.add( backGarden1 );
+  viewer.add( backGarden2 );
+
+
+      // Linking between panoramas
+      
+      // Pair
+      sidegarden.link( backGarden1, new THREE.Vector3( 3145.23, -204.40, 1149.48 ) );
+      backGarden1.link( sidegarden, new THREE.Vector3( -1880, 70, -3421.88 ) );
+      backGarden1.link( backGarden2, new THREE.Vector3( 3500, -170, 2500.88) );
+      backGarden2.link( backGarden1, new THREE.Vector3( 4500, 170, 2000.88) );
+    
+    </script>
+
+  </body>
+  </html>

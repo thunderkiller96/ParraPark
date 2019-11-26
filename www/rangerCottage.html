@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/imageComparison.css">
+<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+<title>Parra Park</title>
+</head>
+
+<header>
+    <button class="back">< back</button>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#9776;</button>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/imageComparison.js"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <div class="menu">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="historyMenu.html"><li>History</li></a>
+        <a href="mapSelection.html"><li>Tour</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</div> 
+<br/><br/>
+
+<center><a href="index.html"><img  id ="logoImage" src="./img/parraLogo.png" alt="Go Home!"></a></center>
+<br/>
+<h3 style="text-align:center;">RANGERS COTTAGE:</h3>
+
+<div class="ba-slider">
+    <img src="img/ranger_present.png" alt="" width="300px" height="300px">       
+    <div class="resize">
+        <img src="img/ranger_past.png" alt="" width="300px" height="300px">
+    </div>
+    <span class="handle"></span>
+</div>
+
+<div id="textMargin">
+
+    <!-- <h3>RANGERS COTTAGE:</h3> -->
+    <p>In 1789, George Salter was transported to Parramatta for his role in a smuggling ring. After he had served a seven-year sentence he was granted 30 acres of land in 1796. This land grant included the Dairy Precinct and it became a successful farm. In 1813, Salter sold his land to Governor Macquarie and moved to Hobart.<br/><br/> 
+
+    By 1816, the governor had converted Salter’s farm into a dairy. The sunken dairy was built to the south of the Dairy Cottage in 1823. The sunken dairy was a rectangular cottage that measured 5.8m by 4.3m. Inside was a single room that was excavated to a depth of 1.5m below ground surface. A staircase along one wall led to the floor of the sunken dairy and the other walls were lined with stone work benches. It was used to store milk, cheese and butter.<br/><br/>
+
+    After the Vice-Regal Domain was opened to the public as Parramatta Park in 1858, the Dairy Precinct became the home of the Park Rangers.<br/><br/> 
+
+    By the 1880s, the sunken dairy had been demolished and a Rangers Cottage was built in its location. The sunken dairy was soon forgotten about, buried deep beneath the cottage until the 1980’s.<br/><br/>
+
+    In 1987, archaeologist Annie Bickford carried out an unsuccessful excavation in the Dairy Cottage where the sunken dairy was thought to be located. After an interview with Ms Win Whitehead, the daughter of a former park ranger, it was suggested that the sunken dairy was more likely to be under the Rangers Cottage.<br/><br/>
+
+    To find out how the Sunken Dairy was discovered and what it looks like today, go to the <a href="mapRangersCottage.html">Ranger’s Cottage Virtual Tour</a> 
+    
+</p>
+    
+</div>
+
+</body>
+
+</html>

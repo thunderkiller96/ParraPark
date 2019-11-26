@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <title>360 Tour</title>
+  <link rel="stylesheet" type="text/css" href="css/360-navigation.css" />
+  
+<header>
+<button class="back">< back</button>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#9776;</button><!-- &#735; -->
+</header>
+</head>
+
+<body>
+
+  <div id="desc-container-sunken" style="display:none">
+    <div class="title">SUNKEN DAIRY</div>
+    <div class="text">In 1993, a small team led by Wendy Thorpe took up the floor of the Rangers Cottage. The few artefacts they recovered indicated it was filled with industrial slag between 1890 and WWI. Beer bottles from the 1880s cellar and the steps and remains of the sandstone shelves were discovered. Stone flagging found along the northern wall was interpreted as the original floor of the dairy, and in the centre of the room was a well. It is currently unknown when the well was constructed. It may have been built at the same time as Salter’s 1790 cottage or once the Dairy was no longer functioning after 1858.
+    </div>
+  </div>
+
+  <div id="desc-container-doorFrame" style="display:none">
+    <div class="title">DOORFRAMES</div>
+    <div class="text">By the 1870s, the colony was prosperous and buildings were constructed by tradespeople rather than artisan convicts. The Rangers Cottage is typical of late Victorian houses with its double brick walls, solid large doors, high ceilings and hung windows. This is in contrast to the dairy cottage next door.
+    </div>
+  </div>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/panolens-offline.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+
+  <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="historyMenu.html"><li>History</li></a>
+    <a href="mapSelection.html"><li>Tour</li></a>
+    <a href="about.html"><li>About</li></a>
+  </ul>
+</div> 
+
+  <script>
+
+    var cottageEntrance, cottageRoom1, cottageRoom2,  viewer;
+    var infospotSunken, infospotDoorFrames;
+
+    var lookAtPositions = [
+    new THREE.Vector3(801.68, -1440.44, 4710.83)
+
+    ];
+
+    cottageEntrance = new PANOLENS.ImagePanorama( 'img/360/cottageEntrance_360.jpg' );
+
+    cottageEntrance.addEventListener( 'enter-fade-start', function(){
+      viewer.tweenControlCenter( lookAtPositions[0], 0 );
+    } );
+
+    infospotSunken = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotSunken.position.set(-330.27,-2694.37,4191.18);
+    infospotSunken.addHoverElement( document.getElementById( 'desc-container-sunken' ), 200 );
+
+    infospotDoorFrames = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotDoorFrames.position.set(3398.25,-293.54,3646.84);
+    infospotDoorFrames.addHoverElement( document.getElementById( 'desc-container-doorFrame' ), 200 );
+
+    viewer = new PANOLENS.Viewer({ 
+      output: 'console',
+      autoHideInfospot: false 
+    });
+    
+    cottageEntrance.add(infospotSunken);
+    cottageEntrance.add(infospotDoorFrames);
+    viewer.add( cottageEntrance );
+
+    </script>
+
+  </body>
+  </html>

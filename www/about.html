@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+-->
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+<title>Parra Park</title>
+</head>
+
+<header>
+    <button class="back">< back</button>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#9776;</button>
+</header>
+
+<body>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <div class="menu">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="historyMenu.html"><li>History</li></a>
+        <a href="mapSelection.html"><li>Tour</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</div> 
+<br/><br/>
+<center><a href="index.html"><img  id ="logoImage" src="./img/parraLogo.png" alt="Go Home!"></a></center>
+
+<h3 style="text-align:center;">ABOUT</h3>
+<div id = "textMargin">
+    <p>Welcome to the Parramatta Park Trust’s Heritage Mobile App!<br/><br/>
+
+        Through this app you can take a glimpse inside one of Australia’s oldest buildings and explore its rich heritage right from the palm of your hand! <br/><br/>
+
+        This app was developed, in conjunction with Western Sydney University students, as a creative storytelling tool and aims to promote the cultural landscape of Parramatta Park and conserve the integrity of the Dairy Precinct for future generations.
+    </p>
+
+    <img width="100%" src="./img/Dairy Precinct pic in Parra park page.jpg" />
+
+
+
+    <!-- <h3><u>About:</u></h3> -->
+    
+    <!-- <h4>Location</h4> -->
+
+    
+    <p>The Dairy Precinct is the area of land found in the centre of World Heritage Listed Old Government House and Domain (Parramatta Park), and contains the Dairy Cottage and Ranger’s Cottage. The Precinct is bound by timber fencing, and is located to the north of Old Government House, overlooking the Parramatta River. Major upgrades of the Dairy Precinct were completed in 2016 including the creation of a central exhibition space, new digital media systems and landscape works.<br/><br/>
+
+        Uncover the unique heritage on a self-guided virtual tour of the Dairy Precinct with historic and contemporary images and 360° interactive panoramas that allow for a unique way to experience in-app footage as if you were standing within the walls of the historic buildings from the comfort of your own home.<br/><br/>
+
+        To book a real life tour of the Dairy Precinct or find out more about Parramatta Park and its history go to our website <a href="#" onclick="window.open('https://www.parrapark.com.au', '_system');">www.parrapark.com.au</a> or visit our <a href="#" onclick="window.open('https://www.facebook.com/parrapark', '_system');">Facebook page.</a></p>
+
+        <div class="social-channels">
+            <h4 style="text-align:center;">Follow Us</h4>
+            <ul class="social">
+
+                <!--                    <li><a href="https://www.facebook.com/parrapark" target="_blank" title="Follow us on Facebook - Opens link in new tab or window"><i class="fa fa-facebook" aria-hidden="true"><span class="visuallyhidden">Facebook</span></i></a></li>-->
+                
+                
+                <a href="#" onclick="window.open('https://www.facebook.com/parrapark', '_system');"><img border="1" src="img/facebook.png" alt="Go to facebook"></a>
+                
+                <a href="#" onclick="window.open('https://www.instagram.com/parrapark/', '_system');"><img border="1" src="img/instagram.png" alt="Go to Instagram"></a>
+                
+                <a href="#" onclick="window.open('https://twitter.com/parrapark', '_system');"><img border="1" src="img/twitter.png" alt="Go to twitter"></a>
+                
+                <a href="#" onclick="window.open('https://www.youtube.com/user/parrapark', '_system');"><img border="1" src="img/youtube.png" alt="Go to youtube"></a>
+
+            </ul>
+        </div>
+        
+        
+        <!-- <a href="#" onclick="window.open('https://www.eventbrite.com.au/e/januarys-dairy-precinct-tours-tickets-28907378748', '_system');"><p style="text-align:center">Read More</p></a> -->
+        
+    </p>
+
+
+    <h4>Acknowledgments</h4>
+
+    <p>Parramatta Part Trust wish to acknowledge the traditional custodians of the land which Parramatta Park resides in - the Burramatta people of the Darug people, and their Elders past and present.</p>
+
+    <h4>Credits:</h4>
+
+    <p>Content developed by Parramatta Park Trust and Lightwell.<br/><br/>
+        Design and development by Western Sydney University students Kuong-Iy Seng, Joshua Maddison, Suhyab Khan and Adriel Aquino from the Bachelor of Information Communication and Technology and Abigail Viloria from the Bachelor of Tourism Management.<br/><br/>
+        For further image and content credits, go to <a href="#" onclick="window.open('https://www.parrapark.com.au', '_system');">www.parrapark.com.au</a>
+        <b>Copyright Parramatta Park Trust 2017.</b>
+    </p>
+
+</div> 
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <title>360 Tour</title>
+  <link rel="stylesheet" type="text/css" href="css/360-navigation.css" />
+
+<header>
+<button class="back">< back</button>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#9776;</button><!-- &#735; -->
+</header>
+
+</head>
+<body>
+
+<div id="desc-container-ceiling" style="display:none">
+    <div class="title">CEILING</div>
+    <div class="text">The lath and plaster ceiling dates to 1823. Lath and plaster is a traditional building method used in England for centuries and came to New South Wales with convict artisans after 1788. Lath and plaster was used for interior partition walls and the construction of ceilings. Split hardwood laths were made from random lengths and sizes for increased strength and nailed to ceiling joists. Plaster was then applied to form the internal ceiling. Glue was added to the roof as part of conservation treatments in the 1990s. Today conservation practices specify that treatments must be low impact and reversible.
+    </div>
+  </div>
+
+  <div id="desc-container-firePlace" style="display:none">
+    <div class="title">FIREPLACE</div>
+    <div class="text">This fireplace was built in the 1790s and later adapted in the 1820s to serve the room. This can be seen in the top curved top plate and the lower straight top plate. Later the fireplace was plastered with cement render, which was removed in the 1990s during work to modernise the cottage. The kitchen fireplace on the other side of this wall serviced the sunken dairy next door.
+    </div>
+  </div>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/panolens-offline.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+
+ <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="historyMenu.html"><li>History</li></a>
+    <a href="mapSelection.html"><li>Tour</li></a>
+    <a href="about.html"><li>About</li></a>
+  </ul>
+</div> 
+  <script>
+
+    var cottageEntrance, cottageRoom1, cottageRoom2,  viewer;
+    var infospotCeiling, infospotFirePlace;
+
+    var lookAtPositions = [
+    new THREE.Vector3(801.68, -1440.44, 4710.83)
+
+    ];
+
+    cottageRoom1 = new PANOLENS.ImagePanorama( 'img/360/cottageRoom1_360.jpg' );
+
+    infospotCeiling = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotCeiling.position.set(-3271.67,2289.29,3004.77);
+    infospotCeiling.addHoverElement( document.getElementById( 'desc-container-ceiling' ), 200 );
+
+    infospotFirePlace = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+    infospotFirePlace.position.set(413.8,-2090.36,-4516.14);
+    infospotFirePlace.addHoverElement( document.getElementById( 'desc-container-firePlace' ), 200 );
+
+    viewer = new PANOLENS.Viewer({ 
+      output: 'console',
+      autoHideInfospot: false
+       });
+
+    // cottageRoom1.add(infospotCeiling);
+    cottageRoom1.add(infospotCeiling);
+    cottageRoom1.add(infospotFirePlace);
+    viewer.add( cottageRoom1 );
+      
+      
+    </script>
+
+  </body>
+  </html>
